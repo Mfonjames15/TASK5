@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT PAGE</title>
+    <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height:140vh;
+}
+
+.homepage {
+  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
+}
+
+/* HEADER STYLING */
+/* Base Header */
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  flex-wrap: wrap; /* allows wrapping when screen is small */
+}
+
+/* Left Nav */
+.left-navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-navbar ul li a {
+  text-decoration: none;
+  color: #bb5644;
+  font-size: 20px;
+}
+
+.left-navbar ul li a:hover {
+  text-decoration:underline;
+}
+
+/* Logo */
+.center-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-logo img {
+  width: 50px;
+}
+
+/* Right Icons */
+.right-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .center-logo {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  .left-navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .right-icons {
+    margin-top: 10px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .left-navbar ul li a {
+    font-size: 16px;
+  }
+
+  .center-logo img {
+    width: 50px;
+  }
+
+  .right-icons a {
+    font-size: 18px;
+  }
+}
+
+.left-text p {
+  font-weight: 800;
+  color: #bb5644;
+}
+
+#casa-gold {
+  margin-bottom: 40px;
+}
+
+#exclu-jewelry {
+  font-size: 64px;
+  line-height: 48px;
+}
+    .contact-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 40px;
+}
+
+.right-contact h1 {
+    color: #bb5644;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 50%;
+    gap: 20px;
+    background-color: rgba(252, 185, 185, 0.37);
+    flex-wrap: wrap; /* Prevent overflow on smaller screens */
+}
+
+.left-contact img {
+    width: 150px;
+    object-fit: contain;
+    clip-path: circle(60%);
+}
+
+.right-contact {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-contact input,
+.right-contact textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(252, 185, 185, 0.52);
+    margin-bottom: 40px;
+    width: 200px;
+    padding: 8px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.payment-icons img {
+    width: 40px;
+    margin-right: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .contact-form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        flex-direction: column;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .left-contact img {
+        width: 120px;
+    }
+
+    .right-contact {
+        gap: 30px;
+    }
+
+    .right-contact input,
+    .right-contact textarea {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-main {
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .left-contact img {
+        width: 100px;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+    .right-contact input,
+    .right-contact textarea {
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section class="homepage">
+        <header class="header1">
+
+            <!-- Left Navigation -->
+            <nav class="left-navbar">
+                <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./inspirations.html">Inspiration</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Center Logo -->
+            <div class="center-logo">
+                <img id="logo" src="./images/Screenshot 2025-08-11 140936.png" alt="Company Logo">
+            </div>
+
+            <!-- Right Icons -->
+            <div class="right-icons">
+                <a href="#">
+                    <i class="fa-regular fa-heart" style="color: #5f0219;"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user" style="color: #740712;"></i>
+                </a>
+
+                <a>
+                    <i class="fa-solid fa-bag-shopping fa-l" style="color: #680808;"></i>
+                </a>
+            </div>
+        </header>
+
+        <main class="contact-main">
+            <div class="left-text">
+                <p id="exclu-jewelry">CONTACT</p>
+            </div>
+
+            <div class="contact-form">
+                <div class="left-contact">
+                    <img src="./images/gold_inspo.avif">
+                </div>
+
+                <div class="right-contact">
+                    <h1>Do you have any questions?</h1>
+                    <div>
+                        <form class="form">
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="email" name="email" placeholder="Your Email">
+                            <input type="text" name="subject" placeholder="Subject">
+                            <textarea cols="30" rows="10" placeholder="Message"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-section">
+                <h4>Useful links</h4>
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Help & About us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Delivery</h4>
+                <ul>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Free Delivery</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Customer service</h4>
+                <ul>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Addresses</a></li>
+                    <li><a href="#">Account details</a></li>
+                    <li><a href="#">Lost password</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Need help?</h4>
+                <p>+61 (0) 383 766 284</p>
+                <p>+61 (0) 383 766 284</p>
+                <p>Monday - Friday: 8am - 5pm</p>
+                <p>Saturday: 9am - 4pm</p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

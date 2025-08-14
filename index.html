@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
+    <style>
+        /* Global Reset & Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height:140vh;
+}
+
+.homepage {
+  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
+}
+
+/* HEADER STYLING */
+/* Base Header */
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  flex-wrap: wrap; /* allows wrapping when screen is small */
+}
+
+/* Left Nav */
+.left-navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-navbar ul li a {
+  text-decoration: none;
+  color: #bb5644;
+  font-size: 20px;
+}
+
+.left-navbar ul li a:hover {
+  text-decoration:underline;
+}
+
+/* Logo */
+.center-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-logo img {
+  width: 50px;
+}
+
+/* Right Icons */
+.right-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .center-logo {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  .left-navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .right-icons {
+    margin-top: 10px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .left-navbar ul li a {
+    font-size: 16px;
+  }
+
+  .center-logo img {
+    width: 50px;
+  }
+
+  .right-icons a {
+    font-size: 18px;
+  }
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.upper-main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height:100vh;
+  border-bottom: 0.1px solid #f5b8ae;
+  transform: translateX(-10%); /* Adjust this value until the ring is perfectly centered */
+}
+
+.left-text p{
+  font-weight: 800;
+  color: #bb5644;
+}
+
+#casa-gold {
+  margin-bottom: 40px;
+}
+
+#exclu-jewelry {
+  font-size: 64px;
+  line-height: 48px;
+}
+
+.shop-now {
+  margin-top: 40px;
+  padding: 15px;
+  background-color:#bb5644;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.slideshow-container {
+  display: flex; /* Places items in a row */
+  align-items: center; /* Centers lines and slideshow vertically */
+  height: 100vh; /* Adjust to your liking */
+  justify-content: center;
+  border-right: 0.3px solid #f4bdb3;
+  border-left: 0.3px solid #f4bdb3;
+}
+
+
+/* Slideshow box */
+.slideshow {
+  position: relative;  /* Needed so images stack on top of each other */
+  width: 500px;
+  height: 100vh;
+  overflow: visible;    /* Hides parts of images that go outside */
+}
+
+/* All images are stacked in the same spot */
+.slideshow img {
+  position: absolute;  /* Allows stacking */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Makes images fill the space without distortion */
+  opacity: 0;          /* Hide by default */
+  animation: fade 9s infinite; /* Run animation forever */
+}
+
+/* Show each image at different times */
+.slideshow img:nth-child(1) {
+  animation-delay: 0s;
+}
+.slideshow img:nth-child(2) {
+  animation-delay: 3s;
+}
+.slideshow img:nth-child(3) {
+  animation-delay: 6s;
+}
+
+/* The fade animation */
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.lower-main-section{
+  display: flex;
+  justify-content:space-between;
+  padding: 0px 50px 0px 50px;
+}
+
+#num {font-size: 48px;}
+#text {font-size:16px;}
+
+.page2 {
+  background-color: #352620f1;
+}
+
+.page2-content {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.page2-logo {
+  transform:translate(50%, -48%);
+}
+
+.page2-text {
+  transform:translatex(30%);
+}
+
+#num2 {
+  font-size: 50px;
+  color: #fff;
+}
+
+.exclu-prod {
+  font-size: 20px;
+  color: #fff;
+}
+
+.blocks {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  gap:50px;
+}
+
+.square-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.block:hover .square-wrap {
+  border: 0.5px solid rgba(237, 207, 207, 0.263);
+  width: 200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: slideup;
+  animation-duration: 3s;
+} 
+
+.block:hover .circle-wrap {
+  background-color: #e49b8f;
+}
+
+@keyframes slideup {
+  from{transform: translateY(30px);}
+}
+
+.circle-wrap {
+  border: 0.5px solid rgba(237, 207, 207, 0.263);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-wrap:hover {
+  background-color: #BB5644;
+}
+
+.obj-img {
+  width: 90px;
+  margin:auto;
+}
+
+.img-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:90%;
+}
+
+.img-container img{
+  width:49%; 
+  height: 100vh;
+  object-fit:cover;
+}
+
+.left-img {
+  position: relative;
+}
+
+.centered-text {
+  position: absolute;
+  line-height: 70px;
+  color:#fff;
+}
+
+.page3{
+  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
+}
+
+.page3-content {
+  padding: 60px 30px;
+}
+
+#vesti {
+  font-size: 18px;
+  color: #BB5644;
+}
+
+#products {
+  margin: 20px 0px ;
+  font-size: 30px;
+}
+
+.jewelry-blocks {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping */
+  gap: 20px; /* space between items */
+  justify-content: center;
+  padding: 20px;
+}
+
+.jewelry-block {
+  flex: 1 1 calc(33.333% - 20px); /* 3 per row */
+  max-width: calc(33.333% - 20px);
+  background: rgba(247, 226, 226, 0.658);
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.jewelry-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 2 per row on medium screens */
+@media (max-width: 768px) {
+  .jewelry-block {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* 1 per row on small screens */
+@media (max-width: 480px) {
+  .jewelry-block {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.shop-button {
+  width:100px;
+  height: 40px;
+  background-color: #BB5644;
+  color:#fff;
+  font-size: 14px;
+  border: none;
+  margin: 20px auto; /* centers it horizontally */
+  display: block;    /* important for auto margins to work */
+
+}
+
+.page4 {
+  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
+  padding: 60px 0;
+}
+
+.page4-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap:60px;
+}
+
+.signup-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:30px;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid rgba(230, 171, 171, 0.71);
+  width: 1000px;
+  height: 300px;
+}
+
+#subs {
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.61);
+}
+
+#off {
+  font-size: 36px;
+  color:#BB5644
+}
+
+input[type="email"] {
+  border:none;
+  border-bottom: 1px solid black;
+  background: none;
+  margin-right: 30px;
+  width: 300px;
+}
+
+input[type="submit"] {
+  width:150px;
+  height: 40px;
+  background-color: #BB5644;
+  color:#fff;
+  font-size: 14px;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+
+.jewelry-exhibit {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jewelry-exhibit img{
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* --- Your Existing Code Above This --- */
+
+/* Responsive Tweaks */
+
+/* For large tablets and below */
+@media (max-width: 1024px) {
+  .upper-main-section {
+    flex-direction: column;
+    transform: none; /* prevent cutoff */
+    text-align: center;
+    height: auto;
+    padding: 20px;
+  }
+  .slideshow-container {
+    height: auto;
+    flex-direction: column;
+    border-left: none;
+    border-right: none;
+  }
+  .slideshow {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .lower-main-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .blocks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .square-wrap {
+    align-items: center;
+  }
+  .img-container {
+    flex-direction: column;
+  }
+  .img-container img {
+    width: 100%;
+    height: auto;
+  }
+  .signup-block {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  input[type="email"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+  #exclu-jewelry {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  #num,
+  #num2 {
+    font-size: 30px;
+  }
+  .shop-now {
+    width: 100%;
+  }
+  .page2-text {
+    transform: none;
+  }
+  .blocks {
+    gap: 20px;
+  }
+  .square-wrap {
+    gap: 20px;
+  }
+  .circle-wrap {
+    width: 120px;
+    height: 120px;
+  }
+  .centered-text {
+    line-height: 40px;
+    font-size: 18px;
+  }
+  .signup-block {
+    gap: 15px;
+  }
+}
+
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.payment-icons img {
+    width: 40px;
+    margin-right: 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <section class="homepage">
+        <header class="header1">
+            <!-- Left Navigation -->
+            <nav class="left-navbar">
+                <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./inspirations.html">Inspiration</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Center Logo -->
+            <div class="center-logo">
+                <img id="logo" src="./images/Screenshot 2025-08-11 140936.png" alt="Company Logo">
+            </div>
+
+            <!-- Right Icons -->
+            <div class="right-icons">
+                <a href="#">
+                    <i class="fa-regular fa-heart" style="color: #5f0219;"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user" style="color: #740712;"></i>
+                </a>
+
+                <a>
+                    <i class="fa-solid fa-bag-shopping fa-l" style="color: #680808;"></i>
+                </a>
+            </div>
+
+        </header>
+
+        <main class="main-section">
+            <div class="upper-main-section">
+                <div class="left-text">
+                    <p id="casa-gold">---  CASA GOLD</p>
+                    <p id="exclu-jewelry">EXCLUSIVE</p>
+                    <p id="exclu-jewelry">JEWELRY</p>
+
+                    <div>
+                        <button class="shop-now">Shop now</button>
+                    </div>
+                </div>
+
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <img src="./images/jeweler2-product-pic1.webp" alt="Image 1">
+                        <img src="./images/jeweler2-product-pic2-800x800.webp" alt="Image 2">
+                        <img src="./images/jeweler2-product-pic7.webp" alt="Image 3">
+                    </div>
+                </div>
+            </div>
+                
+            <div class="lower-main-section">
+                <div class="num&text">
+                    <p id="num">35</p>
+                    <p id="text">Pellentesque tortor nibh convallis fames id lorem.</p>
+                </div>
+
+                <div class="num&text">
+                    <p id="num">97%</p>
+                    <p id="text">Elit ut metus aliquam eu ac sed vel.</p>
+                </div>
+
+                <div class="num&text">
+                    <p id="num">58</p>
+                    <p id="text">Mi aliquam in augue lectus dictum fermentum elit.</p>
+                </div>
+            </div>
+        </main>
+    </section>
+
+
+    <section class="page2">
+        <div class="page2-content">
+            <div class="page2-logo">
+                <img src="./images/brown-logo.svg" alt="Bejewel logo">
+            </div>
+
+            <div class="page2-text">
+                <p id="num2">3000</p>
+                <p class="exclu-prod">exclusive products</p>
+            </div>
+
+            <div class="blocks">
+                <div class="block">
+                    <div class="square-wrap">
+                        <div class="circle-wrap">
+                            <img src="./images/earring-no-bg.png" alt="earring" class="obj-img">
+                        </div>
+                         <div class="exclu-prod">Earrings</div>
+                    </div>
+                </div>
+                
+                
+                <div class="block">
+                    <div class="square-wrap">
+                        <div class="circle-wrap">
+                            <img src="./images/tiara-no-bg.png" alt="tiara" class="obj-img">
+                        </div>
+                        <div class="exclu-prod">Tiaras</div>
+                    </div>
+                </div>
+                
+                
+                <div class="block">
+                    <div class="square-wrap">
+                        <div class="circle-wrap">
+                            <img src="./images/pngimg.com - jewelry_ring_PNG6800.png" alt="rings" class="obj-img">
+                        </div>
+                        <div class="exclu-prod">Rings</div>
+                    </div>
+                </div>
+                
+                
+                <div class="block">
+                    <div class="square-wrap">
+                        <div class="circle-wrap">
+                            <img src="./images/watch-no-bg2.png" alt="watchess" class="obj-img">
+                        </div>
+                        <div class="exclu-prod">Watches</div>
+                    </div>
+                </div>
+                
+                
+                <div class="block">
+                    <div class="square-wrap">
+                        <div class="circle-wrap">
+                            <img src="./images/necklace-no-bg2.png" alt="necklace" class="obj-img">
+                        </div>
+                        <div class="exclu-prod">Necklaces</div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="img-container">
+                    <img src="./images/Lifestyle Diamond Jewellery.jpg" class="left-img">
+                    <img src="./images/jewely-models.jpg" class="right-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="page3">
+        <div class="page3-content">
+            <div>
+                <P id="vesti">- VESTIBULUM</P>
+                <P id="products">PRODUCTS</P>
+            </div>
+
+            <div class="jewelry-blocks">
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic2-800x800.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/fancy earrings.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic1-768x768.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic6-768x768.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic7.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic3-768x768.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+            </div>
+
+            <button class="shop-button">Go to Shop</button>
+        </div>
+    </section>
+
+    <section class="page4">
+        <div class="page4-content">
+            <div class="signup-block">
+                <P id="vesti">- VESTIBULUM</P>
+                <span id="subs">Subscribe to our newsletter and grab</span>
+                <span id="off">30% OFF!</span>
+                <form>
+                    <input type="email" id="email" name="email" placeholder="Your e-mail">
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+
+            <div class="jewelry-exhibit">
+                    <img src="./images/Lifestyle Diamond Jewellery.jpg">
+                    <img src="./images/jewely-models.jpg">
+                    <img src="./images/454932e55a978d8bd8e63335a6f4d6b8.jpg">
+                    <img src="./images/jewelry-ideas.jpg">
+                    <img src="./images/jewelry-gallery2.jpg">
+                    <img src="./images/Screenshot 2025-08-12 163510.png">
+            </div>
+
+            <div class="contacts">
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-section">
+                <h4>Useful links</h4>
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Help & About us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Delivery</h4>
+                <ul>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Free Delivery</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Customer service</h4>
+                <ul>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Addresses</a></li>
+                    <li><a href="#">Account details</a></li>
+                    <li><a href="#">Lost password</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Need help?</h4>
+                <p>+61 (0) 383 766 284</p>
+                <p>+61 (0) 383 766 284</p>
+                <p>Monday - Friday: 8am - 5pm</p>
+                <p>Saturday: 9am - 4pm</p>
+            </div>
+        </footer>
+    </section>
+        
+</body>
+</html>

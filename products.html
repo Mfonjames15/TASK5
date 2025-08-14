@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS PAGE</title>
+    <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
+    <style>
+
+    .products-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        padding: 40px;
+    }
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height:140vh;
+}
+
+.homepage {
+  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
+}
+
+/* HEADER STYLING */
+/* Base Header */
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  flex-wrap: wrap; /* allows wrapping when screen is small */
+}
+
+/* Left Nav */
+.left-navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-navbar ul li a {
+  text-decoration: none;
+  color: #bb5644;
+  font-size: 20px;
+}
+
+.left-navbar ul li a:hover {
+  text-decoration:underline;
+}
+
+/* Logo */
+.center-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-logo img {
+  width: 50px;
+}
+
+/* Right Icons */
+.right-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .center-logo {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  .left-navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .right-icons {
+    margin-top: 10px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .left-navbar ul li a {
+    font-size: 16px;
+  }
+
+  .center-logo img {
+    width: 50px;
+  }
+
+  .right-icons a {
+    font-size: 18px;
+  }
+}
+    .jewelry-blocks {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping */
+  gap: 20px; /* space between items */
+  justify-content: center;
+  padding: 20px;
+}
+
+.jewelry-block {
+  flex: 1 1 calc(33.333% - 20px); /* 3 per row */
+  max-width: calc(33.333% - 20px);
+  background: rgba(247, 226, 226, 0.658);
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.jewelry-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 2 per row on medium screens */
+@media (max-width: 768px) {
+  .jewelry-block {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* 1 per row on small screens */
+@media (max-width: 480px) {
+  .jewelry-block {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.jewelry-exhibit {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jewelry-exhibit img{
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section class="homepage">
+        <header class="header1">
+
+            <!-- Left Navigation -->
+            <nav class="left-navbar">
+                <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./inspirations.html">Inspiration</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Center Logo -->
+            <div class="center-logo">
+                <img id="logo" src="./images/Screenshot 2025-08-11 140936.png" alt="Company Logo">
+            </div>
+
+            <!-- Right Icons -->
+            <div class="right-icons">
+                <a href="#">
+                    <i class="fa-regular fa-heart" style="color: #5f0219;"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user" style="color: #740712;"></i>
+                </a>
+
+                <a>
+                    <i class="fa-solid fa-bag-shopping fa-l" style="color: #680808;"></i>
+                </a>
+            </div>
+        </header>
+
+        <main class="products-main">
+            <div class="left-text">
+                <p id="casa-gold">- CASA GOLD</p>
+                <p id="exclu-jewelry">PRODUCTS</p>
+            </div>
+
+            <div class="jewelry-blocks">
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic2-800x800.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/fancy earrings.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic1-768x768.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic6-768x768.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic7.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/jeweler2-product-pic3-768x768.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/QUEEN BRACELET.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/HEAD-CROWN.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+
+                <div class="jewelry-block">
+                    <img src="./images/WEEDING CROWN.webp">
+                    <div>Dark earrings</div>
+                    <div>$10.00 – $23.00</div>
+                </div>
+            </div>
+
+            <div class="jewelry-exhibit">
+                <img src="./images/Lifestyle Diamond Jewellery.jpg">
+                <img src="./images/jewely-models.jpg">
+                <img src="./images/454932e55a978d8bd8e63335a6f4d6b8.jpg">
+                <img src="./images/jewelry-ideas.jpg">
+                <img src="./images/jewelry-gallery2.jpg">
+                <img src="./images/Screenshot 2025-08-12 163510.png">
+            </div>
+
+        </main>
+    </section>
+</body>
+</html>

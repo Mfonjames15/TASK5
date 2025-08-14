@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height:140vh;
+}
+
+.homepage {
+  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
+}
+
+/* HEADER STYLING */
+/* Base Header */
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  flex-wrap: wrap; /* allows wrapping when screen is small */
+}
+
+/* Left Nav */
+.left-navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-navbar ul li a {
+  text-decoration: none;
+  color: #bb5644;
+  font-size: 20px;
+}
+
+.left-navbar ul li a:hover {
+  text-decoration:underline;
+}
+
+/* Logo */
+.center-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-logo img {
+  width: 50px;
+}
+
+/* Right Icons */
+.right-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .center-logo {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  .left-navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .right-icons {
+    margin-top: 10px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .left-navbar ul li a {
+    font-size: 16px;
+  }
+
+  .center-logo img {
+    width: 50px;
+  }
+
+  .right-icons a {
+    font-size: 18px;
+  }
+}
+
+.left-text p {
+  font-weight: 800;
+  color: #bb5644;
+}
+
+#casa-gold {
+  margin-bottom: 40px;
+}
+
+#exclu-jewelry {
+  font-size: 64px;
+  line-height: 48px;
+}
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    padding: 40px;
+}
+
+.about-txt-img {
+    width: 80%;
+    background-color: #fcb9b985;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px; /* smooth edges for glow */
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+/* Glow on hover */
+.about-txt-img:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4),
+                0 0 40px rgba(212, 175, 55, 0.3),
+                0 0 60px rgba(212, 175, 55, 0.2);
+    transform: translateY(-5px);
+}
+
+.about-txt p {
+    font-size: 24px;
+    line-height: 28px;
+    color: #bb5644;
+}
+
+.jewelry-exhibit {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jewelry-exhibit img {
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    .about-txt-img {
+        width: 90%;
+        padding: 25px;
+        text-align: center;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .about-main {
+        gap: 40px;
+        padding: 20px;
+    }
+    .about-txt-img {
+        width: 95%;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .about-txt p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .about-txt-img {
+        padding: 15px;
+    }
+    .about-txt p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="homepage">
+        <header class="header1">
+
+            <!-- Left Navigation -->
+            <nav class="left-navbar">
+                <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./inspirations.html">Inspiration</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Center Logo -->
+            <div class="center-logo">
+                <img id="logo" src="./images/Screenshot 2025-08-11 140936.png" alt="Company Logo">
+            </div>
+
+            <!-- Right Icons -->
+            <div class="right-icons">
+                <a href="#">
+                    <i class="fa-regular fa-heart" style="color: #5f0219;"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user" style="color: #740712;"></i>
+                </a>
+
+                <a>
+                    <i class="fa-solid fa-bag-shopping fa-l" style="color: #680808;"></i>
+                </a>
+            </div>
+        </header>
+
+        <main class="about-main">
+            <div class="left-text">
+                <p id="exclu-jewelry">ABOUT US</p>
+            </div>
+
+            <div class="about-txt-img">
+                <div class="about-txt">
+                    <p>Gold is the language we speak — warm, luminous, eternal.
+Each creation is a whisper of heritage, shaped by artistry, and polished with devotion.
+
+We draw from the sun’s radiance, the grace of tradition, and the purity of modern lines. Every piece is crafted to be more than adornment — it is a keeper of memories, a companion to your story.</p>
+
+<p>At CASA GOLD, we don’t follow trends.
+We craft forever.</p>
+
+                </div class="about-img">
+                    <video width="400" autoplay muted loop>
+                        <source src="./images/Lifestyle Diamond Jewellery in 2025 _ Creative jewelry photography Diamond pendant Creative jewelry.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+
+            <div class="jewelry-exhibit">
+                    <img src="./images/Lifestyle Diamond Jewellery.jpg">
+                    <img src="./images/jewely-models.jpg">
+                    <img src="./images/454932e55a978d8bd8e63335a6f4d6b8.jpg">
+                    <img src="./images/jewelry-ideas.jpg">
+                    <img src="./images/jewelry-gallery2.jpg">
+                    <img src="./images/Screenshot 2025-08-12 163510.png">
+            </div>
+        </main>
+
+
+    </section>
+</body>
+</html>

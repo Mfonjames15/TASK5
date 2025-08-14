@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSPIRATIONS PAGE</title>
+    <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height:140vh;
+}
+
+.homepage {
+  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
+}
+
+/* HEADER STYLING */
+/* Base Header */
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  flex-wrap: wrap; /* allows wrapping when screen is small */
+}
+
+/* Left Nav */
+.left-navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-navbar ul li a {
+  text-decoration: none;
+  color: #bb5644;
+  font-size: 20px;
+}
+
+.left-navbar ul li a:hover {
+  text-decoration:underline;
+}
+
+/* Logo */
+.center-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-logo img {
+  width: 50px;
+}
+
+/* Right Icons */
+.right-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .center-logo {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  .left-navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .right-icons {
+    margin-top: 10px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .left-navbar ul li a {
+    font-size: 16px;
+  }
+
+  .center-logo img {
+    width: 50px;
+  }
+
+  .right-icons a {
+    font-size: 18px;
+  }
+}
+
+.inspo-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.inspo-txt-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width:60%;
+}
+
+.inspo-img img {
+  width: 300px;
+  object-fit:cover;
+  clip-path: circle(50%);
+}
+
+#heading {
+  font-weight: 600;
+  font-size: 25px;
+  color: #bb5644;
+  margin-bottom: 20px;
+}
+
+#paragraph {
+  font-size: 18px;
+  color: #bb5644;
+}
+
+.left-text p {
+  font-weight: 800;
+  color: #bb5644;
+}
+
+#casa-gold {
+  margin-bottom: 40px;
+}
+
+#exclu-jewelry {
+  font-size: 64px;
+  line-height: 48px;
+}
+
+.inspo-img video {
+  object-fit:cover;
+  clip-path: circle(50%);
+}
+
+.page4 {
+  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
+  padding: 60px 0;
+}
+
+.page4-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap:60px;
+}
+
+.signup-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:30px;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid rgba(230, 171, 171, 0.71);
+  width: 1000px;
+  height: 300px;
+}
+
+#subs {
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.61);
+}
+
+#off {
+  font-size: 36px;
+  color:#BB5644
+}
+
+input[type="email"] {
+  border:none;
+  border-bottom: 1px solid black;
+  background: none;
+  margin-right: 30px;
+  width: 300px;
+}
+
+input[type="submit"] {
+  width:150px;
+  height: 40px;
+  background-color: #BB5644;
+  color:#fff;
+  font-size: 14px;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.jewelry-exhibit {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jewelry-exhibit img {
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .inspo-txt-img {
+    width: 80%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .inspo-img img,
+  .inspo-img video {
+    width: 250px;
+  }
+  .signup-block {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .inspo-main {
+    gap: 20px;
+    padding: 20px;
+  }
+  .inspo-txt-img {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .inspo-img img,
+  .inspo-img video {
+    width: 200px;
+  }
+  #heading {
+    font-size: 22px;
+  }
+  #paragraph {
+    font-size: 16px;
+  }
+  .signup-block {
+    width: 95%;
+    padding: 20px;
+  }
+  input[type="email"] {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  #exclu-jewelry {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .inspo-img img,
+  .inspo-img video {
+    width: 150px;
+  }
+  #subs,
+  #off {
+    font-size: 24px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <section class="homepage">
+        <header class="header1">
+
+            <!-- Left Navigation -->
+            <nav class="left-navbar">
+                <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./inspirations.html">Inspiration</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Center Logo -->
+            <div class="center-logo">
+                <img id="logo" src="./images/Screenshot 2025-08-11 140936.png" alt="Company Logo">
+            </div>
+
+            <!-- Right Icons -->
+            <div class="right-icons">
+                <a href="#">
+                    <i class="fa-regular fa-heart" style="color: #5f0219;"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user" style="color: #740712;"></i>
+                </a>
+
+                <a>
+                    <i class="fa-solid fa-bag-shopping fa-l" style="color: #680808;"></i>
+                </a>
+            </div>
+        </header>
+
+        <main class="inspo-main">
+            <div class="left-text">
+                <p id="casa-gold">- CASA GOLD</p>
+                <p id="exclu-jewelry">INSPIRATIONS</p>
+            </div>
+
+            <div class="inspo-txt-img">
+                <div class="inspo-text">
+                    <P id="heading">The Radiance of Gold</P>
+                    <P id="paragraph">
+Gold has captivated humanity for thousands of years — a symbol of power, purity, and timeless elegance.
+Its warm glow mirrors the light of the sun, carrying with it a sense of life, energy, and prosperity.
+Every piece we create celebrates gold’s eternal beauty, transforming this precious metal into designs that feel both classic and contemporary.</P>
+                </div>
+
+                <div class="inspo-img">
+                    <img src="./images/gold_inspo.avif">
+                </div>
+            </div>
+
+            <div class="inspo-txt-img">
+                <div class="inspo-text">
+                    <P id="heading">Stories from Heritage</P>
+                    <P id="paragraph">
+Our inspiration is rooted in the rich history of gold craftsmanship.
+From the intricate filigree of ancient civilizations to the bold, minimal lines of modern artistry, we draw on techniques and traditions that have stood the test of time.
+Each piece is not just jewelry — it is a wearable heirloom, connecting today’s style with centuries of golden heritage.</P>
+                </div>
+                
+                <div class="inspo-img">
+                    <video width="300" autoplay muted loop>
+  <source src="./images/Era Stories in 2025 _ Creative jewelry photography Jewellery photography inspiration Jewellery fashion shoot.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+
+            <div class="inspo-txt-img">
+                <div class="inspo-text">
+                    <P id="heading">Inspired by Life’s Golden Moments</P>
+                    <P id="paragraph">
+Gold has always been there for life’s most cherished celebrations — engagements, milestones, and personal triumphs.
+We design each creation to honor these moments, ensuring that the gold you wear carries a story, a memory, and a promise that will last for generations.
+Every piece is more than an accessory — it’s a keepsake of your golden chapter.</P>
+                </div>
+
+                <div class="inspo-img">
+                    <img src="./images/golden-moments.jpg">
+                </div>
+            </div>
+        </main>
+
+        <section class="page4">
+        <div class="page4-content">
+            <div class="signup-block">
+                <P id="vesti">- VESTIBULUM</P>
+                <span id="subs">Subscribe to our newsletter and grab</span>
+                <span id="off">30% OFF!</span>
+                <form>
+                    <input type="email" id="email" name="email" placeholder="Your e-mail">
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+
+            <div class="jewelry-exhibit">
+                    <img src="./images/Lifestyle Diamond Jewellery.jpg">
+                    <img src="./images/jewely-models.jpg">
+                    <img src="./images/454932e55a978d8bd8e63335a6f4d6b8.jpg">
+                    <img src="./images/jewelry-ideas.jpg">
+                    <img src="./images/jewelry-gallery2.jpg">
+                    <img src="./images/Screenshot 2025-08-12 163510.png">
+            </div>
+
+            <div class="contacts">
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
