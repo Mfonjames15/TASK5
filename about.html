@@ -1,287 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
-    <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
-    <style>
-        * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height:140vh;
-}
-
-.homepage {
-  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
-}
-
-/* HEADER STYLING */
-/* Base Header */
-.header1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  position: relative;
-  flex-wrap: wrap; /* allows wrapping when screen is small */
-}
-
-/* Left Nav */
-.left-navbar ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.left-navbar ul li a {
-  text-decoration: none;
-  color: #bb5644;
-  font-size: 20px;
-}
-
-.left-navbar ul li a:hover {
-  text-decoration:underline;
-}
-
-/* Logo */
-.center-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.center-logo img {
-  width: 50px;
-}
-
-/* Right Icons */
-.right-icons {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .header1 {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .center-logo {
-    position: static;
-    transform: none;
-    margin: 10px 0;
-  }
-
-  .left-navbar ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .right-icons {
-    margin-top: 10px;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  .left-navbar ul li a {
-    font-size: 16px;
-  }
-
-  .center-logo img {
-    width: 50px;
-  }
-
-  .right-icons a {
-    font-size: 18px;
-  }
-}
-
-.left-text p {
-  font-weight: 800;
-  color: #bb5644;
-}
-
-#casa-gold {
-  margin-bottom: 40px;
-}
-
-#exclu-jewelry {
-  font-size: 64px;
-  line-height: 48px;
-}
-
-.about-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 70px;
-    padding: 40px;
-}
-
-.about-txt-img {
-    width: 80%;
-    background-color: #fcb9b985;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    border-radius: 15px; /* smooth edges for glow */
-    transition: box-shadow 0.4s ease, transform 0.4s ease;
-}
-
-/* Glow on hover */
-.about-txt-img:hover {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4),
-                0 0 40px rgba(212, 175, 55, 0.3),
-                0 0 60px rgba(212, 175, 55, 0.2);
-    transform: translateY(-5px);
-}
-
-.about-txt p {
-    font-size: 24px;
-    line-height: 28px;
-    color: #bb5644;
-}
-
-.jewelry-exhibit {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.jewelry-exhibit img {
-  width:100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Tablet adjustments */
-@media (max-width: 1024px) {
-    .about-txt-img {
-        width: 90%;
-        padding: 25px;
-        text-align: center;
-    }
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .about-main {
-        gap: 40px;
-        padding: 20px;
-    }
-    .about-txt-img {
-        width: 95%;
-        flex-direction: column;
-        padding: 20px;
-    }
-    .about-txt p {
-        font-size: 20px;
-        line-height: 26px;
-    }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-    .about-txt-img {
-        padding: 15px;
-    }
-    .about-txt p {
-        font-size: 18px;
-        line-height: 24px;
-    }
-}
-
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Casa Gold</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/products.css">
+  <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="homepage">
-        <header class="header1">
 
-            <!-- Left Navigation -->
-            <nav class="left-navbar">
-                <ul>
-                    <li><a href="./index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
-                    <li><a href="./products.html">Products</a></li>
-                    <li><a href="./inspirations.html">Inspiration</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Header -->
+  <header class="site-header">
+    
+    <div class="header-left">
 
-            <!-- Center Logo -->
-            <div class="center-logo">
-                <img id="logo" src="./images/Screenshot 2025-08-11 140936.png" alt="Company Logo">
-            </div>
+      <button 
+      class="mobile-menu-btn"
+      id="mobile-menu-btn" 
+      type="button" 
+      aria-label="Open menu"
+      aria-expanded="false">
+      
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-            <!-- Right Icons -->
-            <div class="right-icons">
-                <a href="#">
-                    <i class="fa-regular fa-heart" style="color: #5f0219;"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-user" style="color: #740712;"></i>
-                </a>
+      <a href="index.html" class="logo">
+        CASA GOLD
+      </a>
 
-                <a>
-                    <i class="fa-solid fa-bag-shopping fa-l" style="color: #680808;"></i>
-                </a>
-            </div>
-        </header>
-
-        <main class="about-main">
-            <div class="left-text">
-                <p id="exclu-jewelry">ABOUT US</p>
-            </div>
-
-            <div class="about-txt-img">
-                <div class="about-txt">
-                    <p>Gold is the language we speak — warm, luminous, eternal.
-Each creation is a whisper of heritage, shaped by artistry, and polished with devotion.
-
-We draw from the sun’s radiance, the grace of tradition, and the purity of modern lines. Every piece is crafted to be more than adornment — it is a keeper of memories, a companion to your story.</p>
-
-<p>At CASA GOLD, we don’t follow trends.
-We craft forever.</p>
-
-                </div class="about-img">
-                    <video width="400" autoplay muted loop>
-                        <source src="./images/Lifestyle Diamond Jewellery in 2025 _ Creative jewelry photography Diamond pendant Creative jewelry.mp4" type="video/mp4"></video>
-                </div>
-            </div>
-
-            <div class="jewelry-exhibit">
-                    <img src="./images/Lifestyle Diamond Jewellery.jpg">
-                    <img src="./images/jewely-models.jpg">
-                    <img src="./images/454932e55a978d8bd8e63335a6f4d6b8.jpg">
-                    <img src="./images/jewelry-ideas.jpg">
-                    <img src="./images/jewelry-gallery2.jpg">
-                    <img src="./images/Screenshot 2025-08-12 163510.png">
-            </div>
-        </main>
+    </div>
 
 
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" aria-label="Wishlist">
+        <i class="fa-regular fa-heart"></i>
+      </button>
+      <button type="button" aria-label="Account">
+        <i class="fa-regular fa-user"></i>
+      </button>
+      <button type="button" aria-label="Shopping bag" class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="about-hero">
+      <p class="about-eyebrow">Our Story</p>
+      <h1 class="about-hero-title">Crafted for the woman who knows her worth</h1>
+      <p class="about-hero-desc">
+        Casa Gold was born from a simple belief: fine gold jewelry should feel as powerful as it looks —
+        timeless, intentional, and made to be worn with confidence every day.
+      </p>
     </section>
+
+    <!-- Story Section -->
+    <section class="about-story">
+      <div class="about-story-grid">
+        <div class="about-story-image">
+          <img
+            src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=80"
+            alt="Casa Gold craftsmanship"
+            loading="lazy"
+          >
+        </div>
+        <div class="about-story-content">
+          <h2>A house of quiet luxury</h2>
+          <p>
+            We design and curate pieces that speak softly but leave a lasting impression.
+            Every ring, necklace, bracelet, and earring is chosen for its purity of form,
+            the warmth of its gold, and the way it moves with the woman who wears it.
+          </p>
+          <p>
+            Our collections are intentionally limited. We believe in quality over excess —
+            in pieces you will reach for for years, not seasons.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="about-values">
+      <div class="about-values-header">
+        <h2>What we stand for</h2>
+        <p>The principles that guide every piece we create and every decision we make.</p>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Craftsmanship</h3>
+          <p>
+            Each piece is finished by skilled hands. We work only with solid 18k gold
+            and partners who share our obsession with detail.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3>Integrity</h3>
+          <p>
+            Transparent materials, honest pricing, and designs that never chase trends
+            at the expense of quality.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Empowerment</h3>
+          <p>
+            We create jewelry that makes women feel bold, elegant, and completely themselves —
+            no statement needed beyond the piece itself.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Responsibility</h3>
+          <p>
+            We are committed to more thoughtful sourcing and packaging that respects
+            both people and the planet.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Craftsmanship highlight -->
+    <section class="about-craft">
+      <div class="about-craft-content">
+        <p class="about-eyebrow">The details matter</p>
+        <h2>From sketch to solid gold</h2>
+        <p>
+          Every Casa Gold design begins with a clear intention: to create something
+          that feels inevitable once it is on the body. We refine proportions until
+          the piece sits just right, then work with trusted artisans who bring that
+          vision to life in solid 18k gold.
+        </p>
+        <p>
+          The result is jewelry that is substantial without being heavy, refined without
+          being fragile, and designed to be worn — not stored away.
+        </p>
+        <a href="products.html" class="btn-outline">Explore the Collection</a>
+      </div>
+      <div class="about-craft-image">
+        <img
+          src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80"
+          alt="Gold jewelry detail"
+          loading="lazy"
+        >
+      </div>
+    </section>
+
+    <!-- Closing statement -->
+    <section class="about-closing">
+      <blockquote>
+        “We don’t just make jewelry. We make pieces that become part of a woman’s story.”
+      </blockquote>
+      <p class="about-closing-label">— Casa Gold</p>
+    </section>
+
+  </main>
+
+  <!-- Cart Drawer (same as Products page) -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
+    <div class="cart-drawer-header">
+      <h2 class="cart-drawer-title">Your Bag <span id="cart-item-count">(0)</span></h2>
+      <button type="button" class="cart-drawer-close" id="cart-drawer-close" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">₦0</strong>
+      </div>
+      <p class="cart-note">Shipping & taxes calculated at checkout</p>
+      <div class="cart-actions">
+        <button type="button" class="btn-continue" id="cart-continue">Continue Shopping</button>
+        <a href="checkout.html" class="btn-checkout" id="cart-checkout">Checkout</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Footer (identical to Products page) -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">CASA GOLD</a>
+        <p class="footer-tagline">Timeless gold jewelry crafted with precision and elegance.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html#rings">Rings</a></li>
+          <li><a href="products.html#necklaces">Necklaces</a></li>
+          <li><a href="products.html#earrings">Earrings</a></li>
+          <li><a href="products.html#bracelets">Bracelets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Care Instructions</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-newsletter">
+        <h4>Stay Connected</h4>
+        <p>Subscribe for exclusive offers and new arrivals.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Pinterest">Pinterest</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Casa Gold. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (reuse your existing cart logic) -->
+  <script src="js/global.js"></script>
+  <script src="js/product-data.js"></script>
+  <script src="js/product.js"></script>   <!-- if you extracted cart logic -->
 </body>
 </html>

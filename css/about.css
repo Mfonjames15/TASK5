@@ -1,0 +1,286 @@
+/* ========================================
+   Casa Gold — About Page
+   ======================================== */
+
+/* Hero */
+.about-hero {
+  padding: 64px 6% 56px;
+  text-align: center;
+  background-color: #f9f7f4;
+  border-bottom: 1px solid #e8e2db;
+}
+
+.about-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #9a7652;
+  margin-bottom: 16px;
+}
+
+.about-hero-title {
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4.5vw, 40px);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #2c211b;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  line-height: 1.25;
+}
+
+.about-hero-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #5c4e45;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Story */
+.about-story {
+  padding: 80px 6%;
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-story-image {
+  overflow: hidden;
+  background: #f4f0eb;
+}
+
+.about-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4 / 5;
+}
+
+.about-story-content h2 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #2c211b;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.about-story-content p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #5c4e45;
+  margin-bottom: 16px;
+}
+
+.about-story-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Values */
+.about-values {
+  padding: 80px 6%;
+  background-color: #f9f7f4;
+}
+
+.about-values-header {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 48px;
+}
+
+.about-values-header h2 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #2c211b;
+  margin-bottom: 12px;
+}
+
+.about-values-header p {
+  font-size: 15px;
+  color: #5c4e45;
+  line-height: 1.6;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #fff;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid #e8e2db;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(44, 33, 27, 0.06);
+}
+
+.value-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a7652;
+  font-size: 22px;
+}
+
+.value-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c211b;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+
+.value-card p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #5c4e45;
+}
+
+/* Craft section */
+.about-craft {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 6%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-craft-content h2 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #2c211b;
+  margin: 12px 0 20px;
+}
+
+.about-craft-content p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #5c4e45;
+  margin-bottom: 16px;
+}
+
+.about-craft-content .btn-outline {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 14px 32px;
+  border: 1px solid #2c211b;
+  color: #2c211b;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.about-craft-content .btn-outline:hover {
+  background: #2c211b;
+  color: #f9f7f4;
+}
+
+.about-craft-image {
+  overflow: hidden;
+  background: #f4f0eb;
+}
+
+.about-craft-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1 / 1;
+}
+
+/* Closing */
+.about-closing {
+  padding: 80px 6%;
+  text-align: center;
+  background-color: #f9f7f4;
+  border-top: 1px solid #e8e2db;
+}
+
+.about-closing blockquote {
+  font-family: Georgia, serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 500;
+  color: #2c211b;
+  max-width: 640px;
+  margin: 0 auto 16px;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.about-closing-label {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #9a7652;
+  text-transform: uppercase;
+}
+
+/* Active nav link */
+.main-nav a.active {
+  /* relies on your existing underline style via ::after */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-story-grid,
+  .about-craft {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-craft-image {
+    order: -1;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 48px 5% 40px;
+  }
+
+  .about-story,
+  .about-values,
+  .about-craft,
+  .about-closing {
+    padding: 56px 5%;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .value-card {
+    padding: 28px 20px;
+  }
+}

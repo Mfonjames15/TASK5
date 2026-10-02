@@ -1,383 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT PAGE</title>
-    <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
-    <style>
-        * {
-        margin: 0;
-        padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height:140vh;
-}
-
-.homepage {
-  background: linear-gradient(to right, #fdf4f0, #feeee9dd);
-}
-
-/* HEADER STYLING */
-/* Base Header */
-.header1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  position: relative;
-  flex-wrap: wrap; /* allows wrapping when screen is small */
-}
-
-/* Left Nav */
-.left-navbar ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.left-navbar ul li a {
-  text-decoration: none;
-  color: #bb5644;
-  font-size: 20px;
-}
-
-.left-navbar ul li a:hover {
-  text-decoration:underline;
-}
-
-/* Logo */
-.center-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.center-logo img {
-  width: 50px;
-}
-
-/* Right Icons */
-.right-icons {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .header1 {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .center-logo {
-    position: static;
-    transform: none;
-    margin: 10px 0;
-  }
-
-  .left-navbar ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .right-icons {
-    margin-top: 10px;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  .left-navbar ul li a {
-    font-size: 16px;
-  }
-
-  .center-logo img {
-    width: 50px;
-  }
-
-  .right-icons a {
-    font-size: 18px;
-  }
-}
-
-.left-text p {
-  font-weight: 800;
-  color: #bb5644;
-}
-
-#casa-gold {
-  margin-bottom: 40px;
-}
-
-#exclu-jewelry {
-  font-size: 64px;
-  line-height: 48px;
-}
-    .contact-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-    padding: 40px;
-}
-
-.right-contact h1 {
-    color: #bb5644;
-}
-
-.contact-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    width: 50%;
-    gap: 20px;
-    background-color: rgba(252, 185, 185, 0.37);
-    flex-wrap: wrap; /* Prevent overflow on smaller screens */
-}
-
-.left-contact img {
-    width: 150px;
-    object-fit: contain;
-    clip-path: circle(60%);
-}
-
-.right-contact {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.right-contact input,
-.right-contact textarea {
-    background: none;
-    border: none;
-    border-bottom: 1px solid rgba(252, 185, 185, 0.52);
-    margin-bottom: 40px;
-    width: 200px;
-    padding: 8px;
-}
-
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 50px;
-    font-family: Arial, sans-serif;
-}
-
-.footer-section {
-    flex: 1 1 200px;
-}
-
-.footer-section h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-    text-decoration: none;
-    color: #555;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.payment-icons img {
-    width: 40px;
-    margin-right: 5px;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 1024px) {
-    .contact-form {
-        width: 70%;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-form {
-        flex-direction: column;
-        width: 90%;
-        padding: 20px;
-    }
-
-    .left-contact img {
-        width: 120px;
-    }
-
-    .right-contact {
-        gap: 30px;
-    }
-
-    .right-contact input,
-    .right-contact textarea {
-        width: 100%;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-main {
-        gap: 40px;
-        padding: 20px;
-    }
-
-    .left-contact img {
-        width: 100px;
-    }
-
-    .contact-form {
-        gap: 15px;
-    }
-
-    .right-contact input,
-    .right-contact textarea {
-        margin-bottom: 20px;
-    }
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Casa Gold</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="homepage">
-        <header class="header1">
 
-            <!-- Left Navigation -->
-            <nav class="left-navbar">
-                <ul>
-                    <li><a href="./index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
-                    <li><a href="./products.html">Products</a></li>
-                    <li><a href="./inspirations.html">Inspiration</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="logo">CASA GOLD</a>
 
-            <!-- Center Logo -->
-            <div class="center-logo">
-                <img id="logo" src="./images/Screenshot 2025-08-11 140936.png" alt="Company Logo">
-            </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
 
-            <!-- Right Icons -->
-            <div class="right-icons">
-                <a href="#">
-                    <i class="fa-regular fa-heart" style="color: #5f0219;"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-user" style="color: #740712;"></i>
-                </a>
+    <div class="header-actions">
+      <button type="button" aria-label="Wishlist">
+        <i class="fa-regular fa-heart"></i>
+      </button>
+      <button type="button" aria-label="Account">
+        <i class="fa-regular fa-user"></i>
+      </button>
+      <button type="button" aria-label="Shopping bag" class="cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
 
-                <a>
-                    <i class="fa-solid fa-bag-shopping fa-l" style="color: #680808;"></i>
-                </a>
-            </div>
-        </header>
+  <main>
 
-        <main class="contact-main">
-            <div class="left-text">
-                <p id="exclu-jewelry">CONTACT</p>
-            </div>
-
-            <div class="contact-form">
-                <div class="left-contact">
-                    <img src="./images/gold_inspo.avif">
-                </div>
-
-                <div class="right-contact">
-                    <h1>Do you have any questions?</h1>
-                    <div>
-                        <form class="form">
-                            <input type="text" name="name" placeholder="Name">
-                            <input type="email" name="email" placeholder="Your Email">
-                            <input type="text" name="subject" placeholder="Subject">
-                            <textarea cols="30" rows="10" placeholder="Message"></textarea>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-section">
-                <h4>Useful links</h4>
-                <ul>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Help & About us</a></li>
-                    <li><a href="#">Shipping & Returns</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Delivery</h4>
-                <ul>
-                    <li><a href="#">How it Works</a></li>
-                    <li><a href="#">Free Delivery</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Customer service</h4>
-                <ul>
-                    <li><a href="#">Orders</a></li>
-                    <li><a href="#">Downloads</a></li>
-                    <li><a href="#">Addresses</a></li>
-                    <li><a href="#">Account details</a></li>
-                    <li><a href="#">Lost password</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Need help?</h4>
-                <p>+61 (0) 383 766 284</p>
-                <p>+61 (0) 383 766 284</p>
-                <p>Monday - Friday: 8am - 5pm</p>
-                <p>Saturday: 9am - 4pm</p>
-            </div>
-        </footer>
+    <!-- Hero -->
+    <section class="contact-hero">
+      <p class="contact-eyebrow">Get in Touch</p>
+      <h1 class="contact-hero-title">We’d love to hear from you</h1>
+      <p class="contact-hero-desc">
+        Whether you have a question about a piece, need styling advice, or simply want to say hello —
+        our team is here to help.
+      </p>
     </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="contact-form-wrap">
+          <h2>Send a message</h2>
+          <form class="contact-form" id="contact-form" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="product">Product Inquiry</option>
+                <option value="order">Order Status</option>
+                <option value="sizing">Sizing & Fit</option>
+                <option value="care">Care & Maintenance</option>
+                <option value="other">Something Else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="How can we help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info">
+          <h2>Contact details</h2>
+          <p class="contact-info-intro">
+            Prefer to reach us directly? Use any of the channels below.
+            We typically respond within 24–48 hours.
+          </p>
+
+          <ul class="contact-details">
+            <li>
+              <div class="detail-icon"><i class="fa-regular fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@casagold.com">hello@casagold.com</a>
+              </div>
+            </li>
+            <li>
+              <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+2348000000000">+234 800 000 0000</a>
+              </div>
+            </li>
+            <li>
+              <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Studio</strong>
+                <span>Lagos, Nigeria</span>
+              </div>
+            </li>
+            <li>
+              <div class="detail-icon"><i class="fa-regular fa-clock"></i></div>
+              <div>
+                <strong>Hours</strong>
+                <span>Mon – Fri, 9am – 6pm WAT</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-social">
+            <p>Follow us</p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
+    <div class="cart-drawer-header">
+      <h2 class="cart-drawer-title">Your Bag <span id="cart-item-count">(0)</span></h2>
+      <button type="button" class="cart-drawer-close" id="cart-drawer-close" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">₦0</strong>
+      </div>
+      <p class="cart-note">Shipping & taxes calculated at checkout</p>
+      <div class="cart-actions">
+        <button type="button" class="btn-continue" id="cart-continue">Continue Shopping</button>
+        <a href="checkout.html" class="btn-checkout" id="cart-checkout">Checkout</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">CASA GOLD</a>
+        <p class="footer-tagline">Timeless gold jewelry crafted with precision and elegance.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html#rings">Rings</a></li>
+          <li><a href="products.html#necklaces">Necklaces</a></li>
+          <li><a href="products.html#earrings">Earrings</a></li>
+          <li><a href="products.html#bracelets">Bracelets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Care Instructions</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-newsletter">
+        <h4>Stay Connected</h4>
+        <p>Subscribe for exclusive offers and new arrivals.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Pinterest">Pinterest</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Casa Gold. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/product-data.js"></script>
+  <script src="js/product.js"></script>
+
 </body>
 </html>
